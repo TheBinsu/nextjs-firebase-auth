@@ -1,14 +1,16 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
+import 'firebase-admin/firestore'
+const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCE8an26rfTjkg8EFUjeMpUICDDx99Lj7s',
-  authDomain: 'nextjs-firebase-auth-a4852.firebaseapp.com',
-  projectId: 'nextjs-firebase-auth-a4852',
-  storageBucket: 'nextjs-firebase-auth-a4852.appspot.com',
-  messagingSenderId: '924467240098',
-  appId: '1:924467240098:web:eb6bd8b51ad23d35278bfb',
+  apiKey: "AIzaSyDuowxNJkkPlE6xx9nPamQmSkKBol4Ct28",
+  authDomain: "next-js-authorisation.firebaseapp.com",
+  projectId: "next-js-authorisation",
+  storageBucket: "next-js-authorisation.appspot.com",
+  messagingSenderId: "220825517268",
+  appId: "1:220825517268:web:2e41419be02a5cd7df4f41"
 }
-
-const app = initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore();
 export const auth = getAuth()
